@@ -14,8 +14,6 @@ examples = [
 # Pipeline
 classifier = transformers.pipeline(
     task='ner', model=os.path.join(os.getcwd(), 'data', 'model'),
-    config=os.path.join(os.getcwd(), 'data', 'model'),
-    tokenizer=os.path.join(os.getcwd(), 'data', 'model'),
     device='cpu')
 
 
@@ -35,7 +33,10 @@ def custom(text):
 
 with gradio.Blocks() as demo:
 
-    gradio.Markdown(value=('<h1>Token Classification</h1><br><b>An illustration.</b>'), line_breaks=True)
+    gradio.Markdown(value=('<h1>Token Classification</h1><br><b>An illustrative interactive interface; the '
+                           'interface software allows for advanced interfaces.</b><br>The classes are '
+                           '<b>art</b>, <b>building</b>, <b>event</b>, <b>location</b>, <b>organisation</b>, '
+                           'and <b>product-weapon</b>.'), line_breaks=True)
 
     with gradio.Row():
         with gradio.Column(scale=3):
@@ -46,7 +47,7 @@ with gradio.Blocks() as demo:
             compact = gradio.Textbox(label='COMPACT')
     with gradio.Row():
         detect = gradio.Button(value='Submit', variant='huggingface')
-        gradio.ClearButton([text, detections, scores, compact], variant='huggingface')
+        gradio.ClearButton([text, detections, scores, compact], variant='secondary')
 
     detect.click(custom, inputs=text, outputs=[detections, scores, compact])    
     gradio.Examples(examples=examples, inputs=[text], examples_per_page=1)
