@@ -4,9 +4,10 @@
 
 This repository hosts `gradio` graphical user interface scripts for [https://huggingface.co](https://huggingface.co) Spaces.
 
-- [x] $\plus$ Space
+- [x] &plus; Space
 - [x] Gradio
 - [x] Public
+
 
 Upload:
 
