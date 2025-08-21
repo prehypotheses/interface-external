@@ -28,7 +28,7 @@ def custom(piece):
     """
 
     tokens = classifier(piece)
-    
+
     summary = pd.DataFrame.from_records(data=tokens)
     if not summary.empty:
         summary = summary.copy()[['word', 'entity', 'score']]
