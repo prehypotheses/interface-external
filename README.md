@@ -1,25 +1,13 @@
 ---
-title: Detecting
-emoji: 📉
+title: Eclectic
+emoji: 👀
+colorFrom: gray
+colorTo: indigo
 sdk: gradio
-sdk_version: 5.23.3
+sdk_version: 5.43.1
 app_file: app.py
 pinned: false
-short_description: Detecting
+short_description: Token Classification & Eclectic Entities
 ---
 
-<br>
-
-Configuration Reference: https://huggingface.co/docs/hub/spaces-config-reference
-
-<br>
-<br>
-
-<br>
-<br>
-
-<br>
-<br>
-
-<br>
-<br>
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
