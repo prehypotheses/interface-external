@@ -4,11 +4,11 @@
 
 This repository hosts `gradio` graphical user interface scripts for [https://huggingface.co](https://huggingface.co) Spaces.
 
-- [x] New Space
+- [x] $\plus$ Space
 - [x] Gradio
 - [x] Public
 
-Then upload 
+Upload:
 
 * [data/](.)
   * <abbr title="The model artefacts of the best model.">model/</abbr>
