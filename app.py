@@ -15,23 +15,25 @@ examples = [
 
 
 # Pipeline
-classifier = transformers.pipeline(
-    task='ner', model=os.path.join(os.getcwd(), 'data', 'model'),
+# noinspection PyTypeChecker
+classifier = transformers.pipeline(task='ner', model=os.path.join(os.getcwd(), 'data', 'model'),
     device='cpu')
 
 
-def custom(text):
+def custom(piece):
     """
 
-    :param text:
+    :param piece:
     :return:
     """
 
-    tokens = classifier(text)
+    tokens = classifier(piece)
+    
     summary = pd.DataFrame.from_records(data=tokens)
-    summary = summary.copy()[['word', 'entity', 'score']]
+    if not summary.empty:
+        summary = summary.copy()[['word', 'entity', 'score']]
 
-    return {'text': text, 'entities': tokens}, summary.to_dict(orient='records'), tokens
+    return {'text': piece, 'entities': tokens}, summary.to_dict(orient='records'), tokens
 
 
 with gradio.Blocks() as demo:
