@@ -1,31 +1,13 @@
-<br>
+---
+title: Eclectic
+emoji: 👀
+colorFrom: gray
+colorTo: indigo
+sdk: gradio
+sdk_version: 5.43.1
+app_file: app.py
+pinned: false
+short_description: Token Classification & Eclectic Entities
+---
 
-### Graphical User Interface
-
-This repository hosts `gradio` graphical user interface scripts for [https://huggingface.co](https://huggingface.co) spaces.
-
-- [x] &plus; Space
-- [x] Gradio
-- [x] Public
-
-<br>
-
-Upload:
-
-* [data/](.)
-  * <abbr title="The model artefacts of the best model.">model/</abbr>
-  * architecture.json
-* [app.py](app.py)
-* [requirements.txt](.hugging/requirements.txt)
-
-<br>
-<br>
-
-<br>
-<br>
-
-<br>
-<br>
-
-<br>
-<br>
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
