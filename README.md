@@ -15,7 +15,7 @@ Upload:
 * [data/](.)
   * <abbr title="The model artefacts of the best model.">model/</abbr>
   * architecture.json
-* [app.py](.hugging/app.py)
+* [app.py](app.py)
 * [requirements.txt](.hugging/requirements.txt)
 
 <br>
