@@ -1,6 +1,6 @@
 <br>
 
-## Graphical User Interface
+### Graphical User Interface
 
 This repository hosts `gradio` graphical user interface scripts for [https://huggingface.co](https://huggingface.co) spaces.
 
