@@ -1,3 +1,4 @@
+"""Module app.py"""
 import os
 
 import gradio
