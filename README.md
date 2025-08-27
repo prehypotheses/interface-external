@@ -16,7 +16,7 @@ Of import:
 * [data](src/data)
   * <abbr title="The model artefacts of the best model.">model/</abbr>
   * architecture.json
-* [app.py](src/app.py)
+* [app.py](app.py)
 * [requirements.txt](src/requirements.txt)
 
 <br>
