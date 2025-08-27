@@ -10,7 +10,7 @@ import src.config
 
 # Pipeline
 configurations = src.config.Config()
-classifier = transformers.pipeline(task='ner', model=os.path.join(os.getcwd(), 'data', 'model'),
+classifier = transformers.pipeline(task='ner', model=os.path.join(os.getcwd(), 'src', 'data', 'model'),
     device='cpu')
 
 
