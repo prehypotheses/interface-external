@@ -1,6 +1,5 @@
 """Module interface.py"""
 import logging
-import os
 import string
 
 import pandas as pd
@@ -9,6 +8,7 @@ import src.algorithms.detections
 import src.algorithms.mappings
 import src.algorithms.page
 import src.algorithms.reconstruction
+import src.config
 import src.functions.objects
 
 
@@ -22,20 +22,20 @@ class Interface:
         Constructor
         """
 
+        self.__configurations = src.config.Config()
+
         # Characters space
         self.__characters = string.ascii_lowercase + string.digits + string.ascii_uppercase
 
-    @staticmethod
-    def __m_config() -> dict:
+    def __m_config(self) -> dict:
         """
 
         :return:
         """
 
         objects = src.functions.objects.Objects()
-        uri = os.path.join(os.getcwd(), 'data', 'model', 'config.json')
 
-        return objects.read(uri=uri)
+        return objects.read(uri=self.__configurations.config_)
 
     @staticmethod
     def __get_mappings(page: pd.DataFrame, tokens:list, m_config: dict) -> pd.DataFrame:
