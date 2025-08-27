@@ -13,7 +13,7 @@ sys.path.append(os.path.join(root, 'src'))
 
 # Modules
 import config
-import src.algorithms.interface
+import algorithms.interface
 
 # Pipeline
 configurations = config.Config()
@@ -31,7 +31,7 @@ def custom(piece):
     tokens = classifier(piece)
 
     # Reconstructing & Persisting
-    tokens = tokens if len(tokens) == 0 else src.algorithms.interface.Interface().exc(
+    tokens = tokens if len(tokens) == 0 else algorithms.interface.Interface().exc(
         piece=piece, tokens=tokens)
 
     # Summary
