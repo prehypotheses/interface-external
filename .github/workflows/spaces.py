@@ -27,6 +27,7 @@ def main(repo_id: str, token: str, repo_type: str, folder_path: str):
     )
     logging.info(destination)
 
+    # The parent directory scripts
     for element in ['app.py', 'README.md', 'requirements.txt']:
         element_ = huggingface_hub.upload_file(
             path_or_fileobj=element, path_in_repo=element,repo_id=repo_id, token=token, repo_type=repo_type )
