@@ -10,4 +10,4 @@ pinned: false
 short_description: Token Classification & Eclectic Entities
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+[configuration reference](https://huggingface.co/docs/hub/spaces-config-reference)
