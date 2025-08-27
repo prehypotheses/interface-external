@@ -1,22 +1,15 @@
 """Module app.py"""
 import os
-import sys
 
 import gradio
 import pandas as pd
 import transformers
 
-# Paths
-root = os.getcwd()
-sys.path.append(root)
-sys.path.append(os.path.join(root, 'src'))
-
-# Modules
-import config
-import algorithms.interface
+import src.algorithms.interface
+import src.config
 
 # Pipeline
-configurations = config.Config()
+configurations = src.config.Config()
 classifier = transformers.pipeline(task='ner', model=os.path.join(os.getcwd(), 'data', 'model'),
     device='cpu')
 
@@ -31,7 +24,7 @@ def custom(piece):
     tokens = classifier(piece)
 
     # Reconstructing & Persisting
-    tokens = tokens if len(tokens) == 0 else algorithms.interface.Interface().exc(
+    tokens = tokens if len(tokens) == 0 else src.algorithms.interface.Interface().exc(
         piece=piece, tokens=tokens)
 
     # Summary
