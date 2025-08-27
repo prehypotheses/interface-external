@@ -23,7 +23,7 @@ def main(repo_id: str, token: str, repo_type: str, folder_path: str):
     # In the case of src
     destination = huggingface_hub.upload_folder(
         repo_id=repo_id, folder_path=folder_path, commit_message='Updating', token=token, repo_type=repo_type,
-        ignore_patterns=["*.safetensors", ".gitattributes"]
+        path_in_repo='src', ignore_patterns=["*.safetensors", ".gitattributes"]
     )
     logging.info(destination)
 
