@@ -1,10 +1,10 @@
 import os
-import transformers
-import pandas as pd
+
 import gradio
+import pandas as pd
+import transformers
 
 import src.algorithms.interface
-
 
 examples = [
     ["The Musée Rodin contains most of Rodin's significant creations, including The Thinker, The Kiss and The Gates of Hell. Many of his sculptures are displayed in the museum's extensive garden. The museum includes a room dedicated to the works of Camille Claudel and one of the two castings of The Mature Age.\n\nFrom Wikipedia"],
