@@ -28,4 +28,4 @@ jobs:
             --repo_id "${{ secrets.HF_USERNAME }}/${{ secrets.HF_SPACE }}" \
             --token ${{ secrets.HF_ENTRY }} \
             --repo_type 'space' \
-            --folder_path "/src"
+            --folder_path "src"
