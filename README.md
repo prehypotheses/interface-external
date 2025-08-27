@@ -1,6 +1,6 @@
 ---
 title: Eclectic
-emoji: 👀
+emoji: 🦀
 colorFrom: red
 colorTo: indigo
 sdk: gradio
