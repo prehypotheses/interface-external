@@ -1,7 +1,7 @@
 ---
 title: Eclectic
 emoji: 👀
-colorFrom: gray
+colorFrom: red
 colorTo: indigo
 sdk: gradio
 sdk_version: 5.43.1
