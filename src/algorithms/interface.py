@@ -6,7 +6,6 @@ import string
 import pandas as pd
 
 import src.algorithms.detections
-
 import src.algorithms.mappings
 import src.algorithms.page
 import src.algorithms.reconstruction
