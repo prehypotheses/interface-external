@@ -8,13 +8,13 @@ class Page:
     Builds the page details of an input text.
     """
 
-    def __init__(self, text: str):
+    def __init__(self, piece: str):
         """
 
-        :param text: An input text; composed of sentences or/and paragraphs
+        :param piece: A piece of text; composed of sentences or/and paragraphs
         """
 
-        temporary = text.splitlines()
+        temporary = piece.splitlines()
         self.__text = ' '.join(temporary)
 
     def __splittings(self) -> list:
