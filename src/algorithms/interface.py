@@ -56,10 +56,10 @@ class Interface:
 
         return mappings
 
-    def exc(self, text: str, tokens: list) -> list:
+    def exc(self, piece: str, tokens: list) -> list:
         """
 
-        :param text:
+        :param piece:
         :param tokens:
         :return:
         """
@@ -67,8 +67,8 @@ class Interface:
         # The underlying model's configuration dictionary.
         m_config = self.__m_config()
 
-        # The input text
-        page = src.algorithms.page.Page(text=text).exc()
+        # The input piece
+        page = src.algorithms.page.Page(piece=piece).exc()
 
         # If tokens is empty ...
         if len(tokens) == 0:
