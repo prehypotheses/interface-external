@@ -1,3 +1,4 @@
+import os
 
 class Config:
 
@@ -15,3 +16,6 @@ class Config:
             ["The AK-47, officially known as the Avtomat Kalashnikova, is an assault rifle that is chambered for the 7.62×39mm cartridge. Developed in the Soviet Union by Russian small-arms designer Mikhail Kalashnikov, it is the originating firearm of the Kalashnikov (or 'AK') family of rifles. After more than seven decades since its creation, the AK-47 model and its variants remain one of the most popular and widely used firearms in the world.\n\nFrom Wikipedia"],
             ["\"... John’s authority fell to its lowest point and when he asked for more money the barons rebelled and forced him to sign the Great Charter (Magna Carta) that greatly limited the monarchical power and established the basis for common law in 1215. John tried to evade the Charter’s provisions shortly after signing it which provoked the outbreak of a civil war known as the First Barons’ War. The rebellious barons offered the English crown to Prince Louis of France who landed in Kent to assist the rebels in 1216. The barons switched sides and attacked Louis after John’s death in 1216 and reissue of the Magna Carta by the regent of John’s successor Henry III, William Marshal. The fighting lasted for about a year resulting in the defeat of Louis of France who gave up his claims to the English throne in 1217 ...\"\n\nFrom https://englishhistory.net"]
         ]
+
+        self.model_ = os.path.join(os.getcwd(), 'src', 'data', 'model')
+        self.config_ = os.path.join(self.model_, 'config.json')
