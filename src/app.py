@@ -3,6 +3,8 @@ import transformers
 import pandas as pd
 import gradio
 
+import src.algorithms.interface
+
 
 examples = [
     ["The Musée Rodin contains most of Rodin's significant creations, including The Thinker, The Kiss and The Gates of Hell. Many of his sculptures are displayed in the museum's extensive garden. The museum includes a room dedicated to the works of Camille Claudel and one of the two castings of The Mature Age.\n\nFrom Wikipedia"],
@@ -28,6 +30,10 @@ def custom(piece):
     """
 
     tokens = classifier(piece)
+
+    # Reconstructing & Persisting
+    tokens = tokens if len(tokens) == 0 else src.algorithms.interface.Interface().exc(
+        piece=piece, tokens=tokens)
 
     summary = pd.DataFrame.from_records(data=tokens)
     if not summary.empty:
