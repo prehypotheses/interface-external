@@ -19,6 +19,9 @@ Of import:
 * [app.py](../app.py)
 * [requirements.txt](../requirements.txt)
 
+References:
+* [Spaces GitHub Actions](https://huggingface.co/docs/hub/spaces-github-actions)
+* [huggingface.co repository](https://huggingface.co/docs/huggingface_hub/guides/repository)
 
 <br>
 <br>
