@@ -1,8 +1,11 @@
+"""Module app.py"""
 import os
-import transformers
-import pandas as pd
-import gradio
 
+import gradio
+import pandas as pd
+import transformers
+
+import src.algorithms.interface
 
 examples = [
     ["The Musée Rodin contains most of Rodin's significant creations, including The Thinker, The Kiss and The Gates of Hell. Many of his sculptures are displayed in the museum's extensive garden. The museum includes a room dedicated to the works of Camille Claudel and one of the two castings of The Mature Age.\n\nFrom Wikipedia"],
@@ -23,15 +26,19 @@ classifier = transformers.pipeline(task='ner', model=os.path.join(os.getcwd(), '
 def custom(piece):
     """
 
-    :param piece:
+    :param piece: A piece of text; composed of sentences or/and paragraphs
     :return:
     """
 
     tokens = classifier(piece)
 
+    # Reconstructing & Persisting
+    tokens = tokens if len(tokens) == 0 else src.algorithms.interface.Interface().exc(
+        piece=piece, tokens=tokens)
+
+    # Summary
     summary = pd.DataFrame.from_records(data=tokens)
-    if not summary.empty:
-        summary = summary.copy()[['word', 'entity', 'score']]
+    summary = summary.copy()[['word', 'entity', 'score']] if not summary.empty else summary
 
     return {'text': piece, 'entities': tokens}, summary.to_dict(orient='records'), tokens
 
