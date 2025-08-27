@@ -1,5 +1,29 @@
 <br>
 
+## huggingface.co
+
+This repository hosts the programs of a [huggingface.co](https://huggingface.co) `gradio` graphical user interface.  The interface enables interactions with a token classification model.  Within [https://huggingface.co](https://huggingface.co), we create a [`space`](https://huggingface.co/docs/hub/spaces) with the settings
+
+- [x] Space
+- [x] Gradio
+- [x] Public
+
+<br>
+
+Of import:
+
+* [data](../src/data)
+  * <abbr title="The model artefacts of the best model.">model/</abbr>
+  * architecture.json
+  * latest.json
+* [app.py](../app.py)
+* [requirements.txt](../requirements.txt)
+
+
+<br>
+<br>
+
+
 ## Development Environment
 
 The outlined remote environment is used build and test [https://huggingface.co](https://huggingface.co) Space `gradio` applications.
@@ -63,27 +87,6 @@ Get the name of the running instance of ``interact`` via:
 ```shell
 docker ps --all
 ```
-
-<br>
-<br>
-
-## huggingface.co
-
-This repository hosts `gradio` graphical user interface scripts for [https://huggingface.co](https://huggingface.co) spaces.
-
-- [x] Space
-- [x] Gradio
-- [x] Public
-
-<br>
-
-Of import:
-
-* [data](src/data)
-  * <abbr title="The model artefacts of the best model.">model/</abbr>
-  * architecture.json
-* [app.py](app.py)
-* [requirements.txt](src/requirements.txt)
 
 <br>
 <br>
