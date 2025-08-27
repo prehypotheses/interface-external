@@ -25,7 +25,7 @@ classifier = transformers.pipeline(task='ner', model=os.path.join(os.getcwd(), '
 def custom(piece):
     """
 
-    :param piece:
+    :param piece: A piece of text; composed of sentences or/and paragraphs
     :return:
     """
 
@@ -35,9 +35,9 @@ def custom(piece):
     tokens = tokens if len(tokens) == 0 else src.algorithms.interface.Interface().exc(
         piece=piece, tokens=tokens)
 
+    # Summary
     summary = pd.DataFrame.from_records(data=tokens)
-    if not summary.empty:
-        summary = summary.copy()[['word', 'entity', 'score']]
+    summary = summary.copy()[['word', 'entity', 'score']] if not summary.empty else summary
 
     return {'text': piece, 'entities': tokens}, summary.to_dict(orient='records'), tokens
 
