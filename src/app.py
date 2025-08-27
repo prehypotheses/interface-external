@@ -6,11 +6,6 @@ import gradio
 import pandas as pd
 import transformers
 
-# Paths
-root = os.getcwd()
-sys.path.append(root)
-sys.path.append(os.path.join(root, 'src'))
-
 # Modules
 import config
 import algorithms.interface
