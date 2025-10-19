@@ -11,3 +11,15 @@ short_description: Token Classification & Eclectic Entities
 ---
 
 [configuration reference](https://huggingface.co/docs/hub/spaces-config-reference)
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
