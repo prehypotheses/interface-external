@@ -9,6 +9,7 @@
   "decoder_start_token_id": 0,
   "dense_act_fn": "relu",
   "dropout_rate": 0.1,
+  "dtype": "float32",
   "eos_token_id": 1,
   "feed_forward_proj": "relu",
   "id2label": {
@@ -16,10 +17,10 @@
     "1": "art",
     "2": "building",
     "3": "event",
-    "4": "location",
+    "4": "gpe",
     "5": "organisation",
     "6": "person",
-    "7": "product-weapon"
+    "7": "weapon"
   },
   "initializer_factor": 1.0,
   "is_encoder_decoder": false,
@@ -29,10 +30,10 @@
     "art": 1,
     "building": 2,
     "event": 3,
-    "location": 4,
+    "gpe": 4,
     "organisation": 5,
     "person": 6,
-    "product-weapon": 7
+    "weapon": 7
   },
   "layer_norm_epsilon": 1e-06,
   "model_type": "t5",
@@ -73,8 +74,7 @@
       "prefix": "translate English to Romanian: "
     }
   },
-  "torch_dtype": "float32",
-  "transformers_version": "4.55.2",
+  "transformers_version": "4.57.1",
   "use_cache": false,
   "vocab_size": 32128
 }

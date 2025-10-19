@@ -10,6 +10,8 @@ import src.config
 
 # Pipeline
 configurations = src.config.Config()
+
+# noinspection PyTypeChecker
 classifier = transformers.pipeline(task='ner', model=configurations.model_,
     device='cpu')
 
@@ -38,8 +40,8 @@ with gradio.Blocks() as demo:
 
     gradio.Markdown(value=('<h1>Token Classification</h1><br><b>An illustrative interactive interface; the '
                            'interface software allows for advanced interfaces.</b><br>The classes are '
-                           '<b>art</b>, <b>building</b>, <b>event</b>, <b>location</b>, <b>organisation</b>, '
-                           'and <b>product-weapon</b>.'), line_breaks=True)
+                           '<b>art</b>, <b>building</b>, <b>event</b>, <b>gpe</b> (geo-political entity), <b>organisation</b>, '
+                           'and <b>weapon</b>.'), line_breaks=True)
 
     with gradio.Row():
         with gradio.Column(scale=3):
